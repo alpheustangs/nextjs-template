@@ -17,7 +17,10 @@ const nextConfig = {
     },
     trailingSlash: false,
     compiler: {
-        styledComponents: true
+        styledComponents: {
+            displayName: false,
+            ssr: true,
+        }
     }
 }
 
