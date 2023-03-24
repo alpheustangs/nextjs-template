@@ -42,7 +42,7 @@ export default function Document() {
         <NextDocument.Html>
             {/* No Javascript */}
             <noscript>
-                {/* <meta httpEquiv="refresh" content="0; url=https://example.com/noscript" /> */}
+                {/* <meta httpEquiv="refresh" content="0; URL=https://example.com/noscript" /> */}
             </noscript>
             {/* Preconnect */}
             <link rel="preconnect" href="https://media.example.com" />
