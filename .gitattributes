@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.js linguist-language=JavaScript
+*.ts linguist-language=TypeScript
+*.jsx linguist-language=JavaScript
+*.tsx linguist-language=TypeScript
+*.css linguist-language=CSS
+*.scss linguist-language=SCSS
+*.svg linguist-language=XML
