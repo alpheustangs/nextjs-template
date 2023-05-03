@@ -7,30 +7,29 @@ import styled from "styled-components";
 import Meta from "@/services/meta";
 
 const Page: NextPageWithLayout = () => {
+	const { t, i18n } = useTranslation();
 
-    const { t, i18n } = useTranslation();
-
-    return (
-        <>
-            <Meta title={t("title")} />
-            <Div>{t("title")}</Div>
-            <Div>{t("description")}</Div>
-        </>
-    );
-}
+	return (
+		<>
+			<Meta title={t("title")} />
+			<Div>{t("title")}</Div>
+			<Div>{t("description")}</Div>
+		</>
+	);
+};
 
 export const getServerSideProps = async ({ query, locale }: any) => {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"])),
-        }
-    };
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ["common"])),
+		},
+	};
 };
 
 export default Page;
 
 const Div = styled.div`
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
 `;

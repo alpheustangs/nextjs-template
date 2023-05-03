@@ -8,36 +8,38 @@ import "@/layouts/styles.scss";
 import Initialize from "@/services/initialize/initialize";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-    getLayout?: (page: React.ReactElement) => React.ReactElement;
-}
+	getLayout?: (page: React.ReactElement) => React.ReactElement;
+};
 
 type AppPropsWithLayout = AppProps & {
-    Component: NextPageWithLayout;
-}
+	Component: NextPageWithLayout;
+};
 
 const getDefaultLayout = (page: React.ReactElement) => {
-    return (
-        <>
-            {/* Layout */}
-            {page}
-        </>
-    );
-}
+	return (
+		<>
+			{/* Layout */}
+			{page}
+		</>
+	);
+};
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+	// declarations
+	const getLayout = Component.getLayout ?? getDefaultLayout;
 
-    const getLayout = Component.getLayout ?? getDefaultLayout;
+	// useEffects
+	React.useEffect(() => {
+		document.body.classList.remove("none");
+	}, []);
 
-    React.useEffect(() => {
-        document.body.classList.remove("none");
-    }, []);
-
-    return getLayout(
-        <>
-            <Component {...pageProps} />
-            <Initialize />
-        </>
-    );
-}
+	// contents
+	return getLayout(
+		<>
+			<Component {...pageProps} />
+			<Initialize />
+		</>,
+	);
+};
 
 export default appWithTranslation(App);

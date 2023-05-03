@@ -7,30 +7,25 @@ import styled from "styled-components";
 import Meta from "@/services/meta";
 
 const Page: NextPageWithLayout = () => {
+	const { t, i18n } = useTranslation();
 
-    const { t, i18n } = useTranslation();
-
-    return (
-        <>
-            <Meta title={t("") + t("title")} />
-        </>
-    );
-}
+	return (
+		<>
+			<Meta title={t("") + t("title")} />
+		</>
+	);
+};
 
 Page.getLayout = function getLayout(page: React.ReactElement) {
-    return (
-        <>
-            {page}
-        </>
-    );
-}
+	return <>{page}</>;
+};
 
 export const getServerSideProps = async ({ query, locale }: any) => {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"])),
-        }
-    };
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ["common"])),
+		},
+	};
 };
 
 export default Page;

@@ -1,0 +1,10 @@
+.git
+.github
+.vscode
+dist
+.next
+build
+node_modules
+pnpm-debug.log*
+pnpm-lock.yaml
+README.md
