@@ -6,4 +6,3 @@
 *.tsx linguist-language=TypeScript
 *.css linguist-language=CSS
 *.scss linguist-language=SCSS
-*.svg linguist-language=XML

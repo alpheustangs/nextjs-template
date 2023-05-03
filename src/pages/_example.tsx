@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styled from "styled-components";
 
-import Meta from "@/services/meta";
+import Meta from "@/components/meta";
 
 const Page: NextPageWithLayout = () => {
 	const { t, i18n } = useTranslation();

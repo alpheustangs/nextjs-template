@@ -2,6 +2,7 @@
 /node_modules
 /.next
 /build
+*.log
 pnpm-debug.log*
 pnpm-lock.yaml
 __MACOSX

@@ -40,30 +40,30 @@ export default function Document() {
 
 	return (
 		<NextDocument.Html>
-			{/* No Javascript */}
+			{/* no javascript */}
 			<noscript>
 				{/* <meta httpEquiv="refresh" content="0; URL=https://example.com/noscript" /> */}
 			</noscript>
-			{/* Preconnect */}
+			{/* preconnect */}
 			<link rel="preconnect" href="https://media.example.com" />
-			{/* Basic Info */}
+			{/* basic info */}
 			<meta charSet="utf-8" />
-			<meta name="theme-color" content="#3498DB" />
+			<meta name="theme-color" content="#FFFFFF" />
 			<meta
 				name="viewport"
 				content="width=device-width, initial-scale=1, viewport-fit=cover"
 			/>
-			<link rel="icon" href="https://media.example.com/icon.png" />
+			<link rel="icon" href="https://cdn.example.com/icon.png" />
 			<link
 				rel="shortcut icon"
 				type="image/vnd.microsoft.icon"
-				href="https://media.example.com/iconFill.ico"
+				href="https://cdn.example.com/icon.png"
 			/>
 			<link rel="manifest" href="/manifest.json" />
 			{/* SEO */}
 			<meta property="og:type" content="website" />
 			<meta property="twitter:card" content="summary_large_image" />
-			{/* Mobile */}
+			{/* mobile */}
 			<meta name="mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-capable" content="yes" />
 			<meta name="apple-mobile-web-app-title" content="Example" />
@@ -73,7 +73,7 @@ export default function Document() {
 			/>
 			<link
 				rel="apple-touch-icon"
-				href="https://media.example.com/icon.png"
+				href="https://cdn.example.com/icon.png"
 			/>
 			<NextDocument.Head />
 			<body className="none">
