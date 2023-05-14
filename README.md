@@ -12,37 +12,49 @@ Template write with the following dependencies:
 - Zustand
 - PM2
 
-## development
+## Development
+
+Host development server:
 
 ```bash
 pnpm run dev
 ```
 
-## format
+## Format
+
+Fix & Format coding styles:
 
 ```bash
 pnpm run format
 ```
 
-## build
+## Build
+
+Build the project for production:
 
 ```bash
 pnpm run build
 ```
 
-## production preview
+## Production preview
+
+Preview production mode:
 
 ```bash
 pnpm run preview
 ```
 
-## production
+## Production
+
+Production mode with PM2:
 
 ```bash
 pnpm run start
 ```
 
-## deploy
+## Deployment
+
+Do the deployment with one command:
 
 ```bash
 pnpm run deploy
